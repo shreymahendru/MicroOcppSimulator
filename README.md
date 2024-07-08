@@ -1,3 +1,6 @@
+##### Change the websocket url and charging station ID in main.cpp in line 107
+
+
 # <img src="https://github.com/matth-x/MicroOcpp/assets/63792403/1c49d1ad-7afc-48d3-a54e-9aef2d4886db" alt="Icon" height="24"> &nbsp; MicroOcppSimulator
 
 [![Build (Ubuntu)](https://github.com/matth-x/MicroOcppSimulator/workflows/Ubuntu/badge.svg)]((https://github.com/matth-x/MicroOcppSimulator/actions))

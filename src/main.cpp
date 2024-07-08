@@ -102,7 +102,7 @@ int main() {
     auto filesystem = MicroOcpp::makeDefaultFilesystemAdapter(MicroOcpp::FilesystemOpt::Use_Mount_FormatOnFail);
 
     load_ocpp_version(filesystem);
-
+    // TODO: Check the IP here and use the correct one
     osock = new MicroOcpp::MOcppMongooseClient(&mgr,
         "ws://10.0.0.151:8180/steve/websocket/CentralSystemService/",
         "test123",
