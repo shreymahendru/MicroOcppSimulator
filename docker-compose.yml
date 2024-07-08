@@ -1,0 +1,7 @@
+services:
+  micro-controller:
+    build: .
+    container_name: micro-controller
+    ports:
+      - "8000:8000"
+

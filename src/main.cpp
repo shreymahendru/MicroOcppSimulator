@@ -94,7 +94,7 @@ void app_loop() {
 #if MO_NETLIB == MO_NETLIB_MONGOOSE
 
 int main() {
-    mg_log_set(MG_LL_INFO);                            
+    mg_log_set(MG_LL_INFO);
     mg_mgr_init(&mgr);
 
     mg_http_listen(&mgr, "0.0.0.0:8000", http_serve, NULL);     // Create listening connection
@@ -104,8 +104,8 @@ int main() {
     load_ocpp_version(filesystem);
 
     osock = new MicroOcpp::MOcppMongooseClient(&mgr,
-        "ws://echo.websocket.events",
-        "charger-01",
+        "ws://10.0.0.151:8180/steve/websocket/CentralSystemService/",
+        "test123",
         "",
         "",
         filesystem,
@@ -146,3 +146,5 @@ int main() {
     printf("[WASM] setup complete\n");
 }
 #endif
+
+
