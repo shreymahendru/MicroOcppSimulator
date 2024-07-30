@@ -48,6 +48,10 @@ MicroOcpp::Connection *conn = nullptr;
 void load_ocpp_version(std::shared_ptr<MicroOcpp::FilesystemAdapter> filesystem) {
 
     MicroOcpp::configuration_init(filesystem);
+    MicroOcpp::declareConfiguration<const char*>("MeterValuesSampledData", "Power.Active.Import,Energy.Active.Import.Register,Voltage,Current.Import");
+MicroOcpp::declareConfiguration<const char*>("StopTxnSampledData", "Power.Active.Import,Energy.Active.Import.Register,Voltage,Current.Import");
+MicroOcpp::declareConfiguration<const char*>("MeterValuesAlignedData", "Power.Active.Import,Energy.Active.Import.Register,Voltage,Current.Import");
+MicroOcpp::declareConfiguration<const char*>("StopTxnAlignedData", "Power.Active.Import,Energy.Active.Import.Register,Voltage,Current.Import");
 
     #if MO_ENABLE_V201
     {
@@ -105,7 +109,7 @@ int main() {
     // TODO: Check the IP here and use the correct one
     osock = new MicroOcpp::MOcppMongooseClient(&mgr,
         "ws://10.0.0.151:8180/steve/websocket/CentralSystemService/",
-        "test123",
+        "Shrey-Charger-Micro",
         "",
         "",
         filesystem,
